@@ -1,0 +1,170 @@
+. {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+/* new nav  bar  and hero section */
+.top-nav {
+  background: rgb(0, 0, 120, 0.136);
+  /* position: absolute; */
+  /* display: flex;
+  justify-content: space-between; */
+  position: fixed;
+  width: 100vw;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+.menu ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+.menu ul li {
+  margin-left: 1rem;
+}
+.menu ul li:hover {
+  cursor: pointer;
+  color: red;
+}
+.hero {
+  background: url(https://images.unsplash.com/photo-1661749212437-800b861a17bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80)
+    no-repeat center;
+  background-size: cover;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* anim */
+  position: relative;
+  /* to keep ball behind , give z index */
+  /* z-index: -2; */
+}
+/* for glass murphy */
+.round {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(red, yellow);
+  /* background: radial-gradient(white, red); */
+  border-radius: 50%;
+  position: relative;
+  left: 51px;
+  top: 94px;
+  /* to keep ball behind give z index */
+  /* z-index: -1; */
+}
+.hero-content {
+  background: rgba(0, 0, 0, 0.695);
+  width: 450px;
+  color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+
+  /* efefct of glass murphy --- removes z-index */
+  backdrop-filter: blur(5px);
+}
+
+/* images */
+
+.img1 {
+  background: url(https://images.unsplash.com/photo-1661749232278-3c8380532c07?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80)
+    no-repeat center center;
+  background-size: cover;
+  min-height: 50vh;
+}
+.img2 {
+  background: url(https://images.unsplash.com/photo-1661771962693-63a98fa1ee8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)
+    no-repeat center center;
+  background-size: cover;
+  min-height: 50vh;
+}
+.img3 {
+  background: url(https://images.unsplash.com/photo-1661704107314-b603320832be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80)
+    no-repeat center center;
+  background-size: cover;
+  min-height: 50vh;
+}
+.img4 {
+  background: url(https://images.unsplash.com/photo-1661705969607-cde73828023d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80)
+    no-repeat center center;
+  background-size: cover;
+  min-height: 50vh;
+}
+
+.img1,
+.img2,
+.img3,
+.img4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* to make parallax work */
+  background-attachment: fixed;
+}
+.title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.64);
+  color: white;
+  padding: 2rem 6rem;
+  border-radius: 5px;
+}
+
+/* animation */
+.down-arrow {
+  font-size: 3rem;
+  position: absolute;
+  bottom: 50px;
+  color: blueviolet;
+  transform: rotate(90deg);
+  font-weight: bolder;
+  animation: go-down 1s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+}
+
+@keyframes go-down {
+  0% {
+    bottom: 100px;
+    color: yellow;
+  }
+  50% {
+    /* bottom: 10px; */
+    color: red;
+  }
+  100% {
+    bottom: 10px;
+    color: aqua;
+  }
+}
+/* 
+@keyframes arrrow {
+  0% {
+    left: 80vw;
+    top: 50px;
+  }
+  25% {
+    left: 80vw;
+    top: 50px;
+  }
+  50% {
+    left: 80vw;
+    top: 80vw;
+    background: blue;
+  }
+  75% {
+    left: 80vw;
+    top: 70vw;
+  }
+  100% {
+    left: 50px;
+    top: 50px;
+    background: purple;
+  }
+} */
